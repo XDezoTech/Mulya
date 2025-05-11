@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes:
+    light --default,
+    /* dark --prefersdark, */ cupcake;
+}
+
+@theme {
+  --color-brand-50: #f2eafa;
+  --color-brand-100: #e4d4f4;
+  --color-brand-200: #c9a9e9;
+  --color-brand-300: #ae7ede;
+  --color-brand-400: #9353d3;
+  --color-brand-500: #7828c8;
+  --color-brand-600: #6020a0;
+  --color-brand-700: #481878;
+  --color-brand-800: #301050;
+  --color-brand-900: #3b0080;
+}
+
+/* Animation for login/signup */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.3s ease-out;
+}
